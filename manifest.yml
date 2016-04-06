@@ -1,0 +1,7 @@
+---
+applications:
+- name: redis-api
+  memory: 512M
+  
+services:
+  - shaunRedis
