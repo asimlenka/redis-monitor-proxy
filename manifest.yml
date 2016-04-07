@@ -5,3 +5,5 @@ applications:
   
 services:
   - shaunRedis
+  
+buildpack: java_buildpack_offline

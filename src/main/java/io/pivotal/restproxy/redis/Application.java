@@ -1,5 +1,7 @@
 package io.pivotal.restproxy.redis;
 
+import io.pivotal.restproxy.redis.services.APIService;
+
 import java.util.Arrays;
 
 import org.slf4j.Logger;
@@ -15,12 +17,15 @@ public class Application {
 	static Logger log = LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) {
-		SpringApplication app = new SpringApplication(Application.class, args);
+		log.info("Starting redis-api");
+//		SpringApplication app = new SpringApplication(Application.class, args);
 		ApplicationContext ctx = SpringApplication.run(Application.class, args);
 
+		// Register the Spring Context with the APIService
 		APIService svc = ctx.getBean(APIService.class);
 		svc.setCtx(ctx);
-		log.info("Starting it *************");
+		
+		
 		log.debug("Let's inspect the beans provided by Spring Boot:");
 
 		String[] beanNames = ctx.getBeanDefinitionNames();

@@ -80,44 +80,48 @@
 			<version>4.1.1.Final</version>
 
 
-<!-- 			<exclusions> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>io.reactivex</groupId> -->
-<!-- 					<artifactId>rxjava</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>org.latencyutils</groupId> -->
-<!-- 					<artifactId>LatencyUtils</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>io.netty</groupId> -->
-<!-- 					<artifactId>netty-common</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>io.netty</groupId> -->
-<!-- 					<artifactId>netty-transport</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>io.netty</groupId> -->
-<!-- 					<artifactId>netty-handler</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>io.netty</groupId> -->
-<!-- 					<artifactId>netty-codec</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>com.google.guava</groupId> -->
-<!-- 					<artifactId>guava</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>io.netty</groupId> -->
-<!-- 					<artifactId>netty-transport-native-epoll</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>org.apache.commons</groupId> -->
-<!-- 					<artifactId>commons-pool2</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 			</exclusions> -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+				<!-- <exclusion> -->
+				<!-- <groupId>io.reactivex</groupId> -->
+				<!-- <artifactId>rxjava</artifactId> -->
+				<!-- </exclusion> -->
+				<!-- <exclusion> -->
+				<!-- <groupId>org.latencyutils</groupId> -->
+				<!-- <artifactId>LatencyUtils</artifactId> -->
+				<!-- </exclusion> -->
+				<!-- <exclusion> -->
+				<!-- <groupId>io.netty</groupId> -->
+				<!-- <artifactId>netty-common</artifactId> -->
+				<!-- </exclusion> -->
+				<!-- <exclusion> -->
+				<!-- <groupId>io.netty</groupId> -->
+				<!-- <artifactId>netty-transport</artifactId> -->
+				<!-- </exclusion> -->
+				<!-- <exclusion> -->
+				<!-- <groupId>io.netty</groupId> -->
+				<!-- <artifactId>netty-handler</artifactId> -->
+				<!-- </exclusion> -->
+				<!-- <exclusion> -->
+				<!-- <groupId>io.netty</groupId> -->
+				<!-- <artifactId>netty-codec</artifactId> -->
+				<!-- </exclusion> -->
+				<!-- <exclusion> -->
+				<!-- <groupId>com.google.guava</groupId> -->
+				<!-- <artifactId>guava</artifactId> -->
+				<!-- </exclusion> -->
+				<!-- <exclusion> -->
+				<!-- <groupId>io.netty</groupId> -->
+				<!-- <artifactId>netty-transport-native-epoll</artifactId> -->
+				<!-- </exclusion> -->
+				<!-- <exclusion> -->
+				<!-- <groupId>org.apache.commons</groupId> -->
+				<!-- <artifactId>commons-pool2</artifactId> -->
+				<!-- </exclusion> -->
+			</exclusions>
 		</dependency>
 	</dependencies>
 
@@ -140,6 +144,7 @@
 									<mainClass>io.pivotal.restproxy.redis.Application</mainClass>
 								</transformer>
 							</transformers>
+							<!-- <minimizeJar>true</minimizeJar> -->
 						</configuration>
 					</execution>
 				</executions>

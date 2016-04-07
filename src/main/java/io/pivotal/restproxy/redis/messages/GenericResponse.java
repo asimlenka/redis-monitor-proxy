@@ -35,22 +35,6 @@ public class GenericResponse {
 		this.resultMessage = resultMessage;
 	}
 
-	// public JsonNode getElementValueAsJSON() {
-	// ObjectMapper mapper = new ObjectMapper();
-	// // System.out.println("The element value is: " + getElementValue());
-	// JsonNode node = null;
-	// try {
-	// node = mapper.readTree(getElementValue());
-	// } catch (JsonProcessingException e) {
-	// // Don't do anything -- if we can't parse it, it isn't JSON
-	//
-	// } catch (IOException e) {
-	// // Don't do anything -- if we can't parse it, it isn't JSON
-	// }
-	//
-	// return node;
-	// }
-
 	public String toJSON() {
 		String result = "";
 		ObjectMapper mapper = new ObjectMapper();
@@ -59,7 +43,6 @@ public class GenericResponse {
 
 			String jsonStat = mapper.writerWithDefaultPrettyPrinter()
 					.writeValueAsString(this);
-
 			result = jsonStat;
 
 		} catch (Exception e) {
